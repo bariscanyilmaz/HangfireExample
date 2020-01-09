@@ -8,7 +8,6 @@ namespace HangfireExample
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
 
             GlobalConfiguration.Configuration
             .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
@@ -16,7 +15,7 @@ namespace HangfireExample
             .UseRecommendedSerializerSettings()
             .UseSqlServerStorage(@"Server=.\SQLEXPRESS;Database=Hangfire.Sample; Integrated Security=True;");
 
-            
+
 
             //Fire-and-Forget
             BackgroundJob.Enqueue(()=>Console.WriteLine("Fire-and-Forget "));
